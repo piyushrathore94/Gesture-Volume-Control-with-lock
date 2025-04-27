@@ -1,35 +1,51 @@
-# 🎵 Gesture-Based Volume Control
+# 🎵 Gesture-Based Volume Control with Lock Feature
 
-This project allows users to **control system volume using hand gestures**. By detecting the distance between the **thumb and index finger**, the system dynamically adjusts the volume. It uses **OpenCV, MediaPipe, and Pycaw** for real-time hand tracking and audio control.
+This project allows users to control system volume using hand gestures. By detecting the distance between the thumb and index finger, the system dynamically adjusts the volume. It uses OpenCV, MediaPipe, and Pycaw for real-time hand tracking and audio control. **Newly added: gesture-based volume locking to prevent accidental changes!**
+
+---
 
 ## 🚀 Features
 
-- ✋ **Real-time Hand Tracking** using MediaPipe  
-- 🔊 **Volume Control** based on hand distance  
-- 📊 **Logarithmic Scaling** for smoother control  
-- 🎚️ **Visual Volume Bar** for feedback  
-- 🎥 **Works with Any Webcam**  
-- 🖥️ **Windows Audio System Integration**  
+✋ Real-time Hand Tracking using MediaPipe  
+🔊 Volume Control based on hand distance  
+🔐 **Gesture-Based Volume Lock** using thumb–middle finger gesture  
+📊 Logarithmic Scaling for smoother control  
+🎚️ Visual Volume Bar for feedback  
+🎥 Works with Any Webcam  
+🖥️ Windows Audio System Integration
 
 ---
 
 ## 📌 How It Works
 
-1. **Hand Detection**: Uses MediaPipe to detect the hand and identify key landmarks.  
-2. **Distance Measurement**: Calculates the distance between **thumb (landmark 4)** and **index finger (landmark 8)**.  
-3. **Volume Mapping**: Converts the measured distance to a volume level using Pycaw.  
-4. **Display Feedback**: A **volume bar** visually represents the current volume level.  
+1. **Hand Detection**  
+   Uses MediaPipe to detect the hand and identify key landmarks.
+
+2. **Distance Measurement**  
+   Calculates the distance between thumb (landmark 4) and index finger (landmark 8) to control volume.
+
+3. **Volume Mapping**  
+   Converts the measured distance to a volume level using Pycaw, with logarithmic interpolation.
+
+4. **Volume Lock/Unlock Feature (NEW!)**  
+   - **Thumb + Index Close** ➤ Enables volume control  
+   - **Thumb + Middle Close** ➤ Locks volume control to prevent accidental changes  
+   - Visual indicator on screen shows whether volume control is `ON` or `LOCKED`
+
+5. **Display Feedback**  
+   A volume bar visually represents the current volume level with percentage and status.
 
 ---
 
-## 🛠️ Installation  
+## 🛠️ Installation
 
-### 1️⃣ Clone the Repository  
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/piyushrathore94/Gesture-Volume-Control-with-lock.git
 cd "Gesture Volume Control"
-```
+
+---
 
 ### 2️⃣ Install Dependencies  
 
@@ -62,8 +78,15 @@ pyautogui
 python GestureVolumeControl.py
 ```
 
-2️⃣ **Control volume** by moving your **thumb and index finger** closer or farther apart.  
-3️⃣ **Press `q` to exit** the program.  
+2️⃣ Gesture Instructions
+Move thumb and index finger closer or farther to change volume
+
+Touch thumb to middle finger to lock volume
+
+Touch thumb to index again to unlock volume control
+
+Press q to quit
+
 
 ---
 
@@ -96,5 +119,13 @@ This project is **open-source** under the **MIT License**.
 
 ## 🏷️ Hashtags  
 
-`#ComputerVision #OpenCV #HandTracking #AI #MachineLearning #GestureControl #Python #DeepLearning #Automation #Innovation #HCI #Mediapipe #Pycaw #GestureRecognition`
+`#ComputerVision #OpenCV #HandTracking #AI #MachineLearning #GestureControl #Python #DeepLearning
+#Automation #Innovation #HCI #Mediapipe #Pycaw #GestureRecognition #GestureVolumeLock`
+
+
+---
+
+Let me know if you'd like a version with **images**, a **demo GIF**, or want this auto-published to GitHub Pages. I'm all in! 😎
+
+
 
