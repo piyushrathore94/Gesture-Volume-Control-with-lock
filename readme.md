@@ -27,7 +27,7 @@ This project allows users to **control system volume using hand gestures**. By d
 ### 1️⃣ Clone the Repository  
 
 ```bash
-git clone https://github.com/bharathreddy18/Computer-Vision-Projects.git
+git clone https://github.com/piyushrathore94/Gesture-Volume-Control-with-lock.git
 cd "Gesture Volume Control"
 ```
 
