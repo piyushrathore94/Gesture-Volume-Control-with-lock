@@ -49,6 +49,7 @@ mediapipe
 numpy
 pycaw
 comtypes
+pyautogui
 ```
 
 ---
